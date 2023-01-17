@@ -23,5 +23,24 @@ function ChangePage(){
     }
 }
 
-
 ChangePage();
+
+//Darkmode
+    let darkswitch = document.querySelector('#darkswitch');
+    let body = document.querySelector('body')
+
+function theme(){
+    darkswitch.addEventListener('change', () =>{
+        if(darkswitch.checked){
+            body.classList.add('dark')
+            body.classList.remove('light')
+
+        } else {
+            body.classList.add('light')
+            body.classList.remove('dark')
+        }
+    })
+}
+
+
+theme();
