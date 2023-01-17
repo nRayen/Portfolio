@@ -1,7 +1,9 @@
 let navBtn = document.querySelectorAll(".nav-btn");
-console.log(navBtn)
+let pages = document.querySelectorAll(".page");
 
-function btns(){
+function ChangePage(){
+
+    //Change active btn
     for(let i = 0; i < navBtn.length; i++){
         navBtn[i].addEventListener('click', () => {
             let currentBtn = document.querySelector('.active-btn');
@@ -10,6 +12,16 @@ function btns(){
             navBtn[i].classList.add('active-btn')
         })
     }
+    //Change active page
+    for(let i = 0; i < pages.length; i++){
+        navBtn[i].addEventListener('click', () => {
+            let currentPage = document.querySelector('.active-page');
+            currentPage.classList.remove('active-page');
+
+            pages[i].classList.add('active-page')
+        })
+    }
 }
 
-btns();
+
+ChangePage();

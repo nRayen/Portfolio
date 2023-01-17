@@ -17,7 +17,7 @@
 
 body{
     background-color: var(--bg-color);
-    min-height: 100vh;
+    height: 100vh;
 }
 
 /************************Waves************************/
@@ -83,5 +83,22 @@ svg{
 nav ul li button:hover:not(.active-btn) i{
     color: var(--tone-color);
     transition: all 0.5s ease;
+}
+
+/************************Pages************************/
+.page{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    padding: 4%;
+    padding-right: 90px;
+}
+
+.page.active-page{
+    transform: translateX(0%);
+    transition: all 1s;
 }
 
