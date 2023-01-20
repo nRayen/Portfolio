@@ -9,7 +9,7 @@
 }
 
 :root{
-    --tone-color-light: orange;
+    --tone-color-light: #ffa500;
     --tone-color-dark: rgb(0, 85, 255);
     --black: #262626;
     --white: #f2f2f2;
@@ -19,6 +19,7 @@
 
 body{
     height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body.light{
@@ -27,11 +28,7 @@ body.light{
     transition: all .5s ease-in;
 }
 
-body.dark{
-    background-color: var(--bg-color-dark);
-    color: var(--white);
-    transition: all .5s ease-in;
-}
+
 
 /************************Waves************************/
 .waves{
@@ -45,6 +42,7 @@ svg{
     bottom: -90px;
     left: -20%;
     width: 120%;
+    color: var(--tone-color-light);
 }
 
 .waves svg:nth-child(2){
@@ -89,13 +87,13 @@ svg{
 
 .navbar ul .active-btn{
     background-color: var(--tone-color-light);
-    box-shadow: 0 0 10px 2px #ffa6007c;
-    transition: 0.5s ease;
+    box-shadow: 0 0 10px 2px rgba(255, 165, 0, .75);
+    transition: 0.5s ease-in;
 }
 
 nav ul li button:hover:not(.active-btn) i{
     color: var(--tone-color-light);
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in;
 }
 
 /*********************Theme switch********************/
@@ -120,7 +118,7 @@ nav ul li button:hover:not(.active-btn) i{
     right: 0;
     bottom: 0;
     background-color: var(--black);
-    transition: .4s;
+    transition: .5s;
     border-radius: 34px;
   }
   
@@ -132,21 +130,11 @@ nav ul li button:hover:not(.active-btn) i{
     left: 4px;
     bottom: 4px;
     background-color: var(--tone-color-light);
-    -webkit-transition: .4s;
-    transition: .4s;
+    transition: .5s;
     border-radius: 50%;
   }
   
-  input:checked + .slider{
-    background-color:var(--black);
-  }
-  
-  input:checked + .slider:before{
-    transform: translateX(26px);
-    transition: .4s;
-    background-color: var(--black);
-    box-shadow: inset -10px 0px 0 0 var(--white);
-  }
+
 
 /************************Pages************************/
 .page{
